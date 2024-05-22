@@ -188,28 +188,6 @@ def main():
             for j, label in enumerate(label_list):
                 if test_preds[i, j] == 1:
                     print(protein_id, paper_id, label, sep='\t', file=fout)
-    # test_f1_macro = []
-    # for i, label in enumerate(test_df.columns[2:]):
-    #     test_fpr, test_tpr, _ = roc_curve(test_true[:, i], test_preds[:, i])
-    #     test_auc = auc(test_fpr, test_tpr)
-    #     # logger.info(f"Label {i}: AUC = {test_auc:.2f}")
-    #     # plt.plot(test_fpr, test_tpr, label=f"Label {i} (AUC = {test_auc:.2f})")
-    #     test_precision, test_recall, thresholds = precision_recall_curve(test_true[:, i], test_preds[:, i])
-    #     test_aupr = auc(test_recall, test_precision)
-    #     logger.info(f"Label {label}: AUC = {test_auc:.3f}, AUPR = {test_aupr:.3f}")
-    #     best_threshold = -100
-    #     best_f1 = -100
-    #     for threshold in thresholds:
-    #         pred = (test_preds[:, i] > threshold).astype(int)
-    #         f1 = f1_score(test_true[:, i], pred)
-    #         if f1 > best_f1:
-    #             best_f1 = f1
-    #             best_threshold = threshold
-    #     test_f1_macro.append(best_f1)
-    #     logger.info(f"Label {label}: Best F1 = {best_f1:.3f}, Best Threshold = {best_threshold:.3f}")
-    #     test_preds[:, i] = (test_preds[:, i] > best_threshold).astype(int)
-    # test_f1 = f1_score(test_true, test_preds, average='micro')
-    # logger.info('Test micro F1: {:.4f} - Test macro F1: {:.4f}'.format(test_f1, np.mean(test_f1_macro))) 
 
 
 if __name__ == '__main__':
