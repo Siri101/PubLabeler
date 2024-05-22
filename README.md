@@ -17,7 +17,7 @@ pip install torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/w
 pip install transformers
 ```
 
-2. prepare the dataset:
+2. Prepare the dataset:
 
 The data directory must contains the test.csv file. The test.csv file should contain the following columns:
 
@@ -30,7 +30,7 @@ The data directory should also contain the abstracts and titles of the papers in
 - paper_dict.pkl: a dictionary containing the abstracts and titles of the papers, i.e., {pmid: {'title': title, 'abstract': abstract}}
 - pro_name.pkl: a dictionary containing the textual descriptinos of the proteins extracted from the UniProtKB database, i.e., {pid: name}
 
-3. run the code:
+3. Run the code:
 
 - To train the model:
 
