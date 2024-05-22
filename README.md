@@ -38,7 +38,7 @@ The data directory should also contain the abstracts and titles of the papers in
 python main.py
 ```
 
-- To predict the categories of new protein-paper pairs:
+- To predict the categories of new protein-paper pairs (the trained model is available at https://drive.google.com/drive/folders/1quUJeCX1XMt_U-viCG4H6KDuW2tt4O9s?usp=sharing):
 
 ```
 python main.py --model_type test --best_model_idx 3 --init_weight 0
